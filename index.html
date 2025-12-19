@@ -1,3 +1,7 @@
+# Mogno Render - Código HTML Completo Atualizado
+
+## Arquivo: index.html
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -68,7 +72,7 @@
                 <span class="block" data-i18n="hero_title">Visualización sin ruido.</span>
             </h1>
             <p class="text-white/70 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed mb-10" data-i18n="hero_sub">
-                Transformamos proyectos arquitectónicos complejos en herramientas de venta de alta fidelidad. 60% más rápido. 100% previsible.\
+                Transformamos proyectos arquitectónicos complejos en herramientas de venta de alta fidelidad. 60% más rápido. 100% previsible.
             </p>
             <div class="flex flex-col md:flex-row gap-5 justify-center">
                 <a href="#method" class="bg-bronze text-white px-12 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black-mogno transition-all duration-300" data-i18n="hero_cta_2">NUESTRO MÉTODO</a>
@@ -203,7 +207,7 @@
     <footer class="bg-dark-mogno text-white py-24 md:py-32 px-6 md:px-12 border-t border-white/5">
         <div class="max-w-[1440px] mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-24">
-                <!-- LOGO COLUMN - UPDATED WITH SIZE 3X AND CENTERED ALIGNMENT -->
+                <!-- LOGO COLUMN -->
                 <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-8">
                     <img src="https://res.cloudinary.com/drlsevtfr/image/upload/v1766093382/logo2_lrulvz.png" alt="MOGNO Logo" class="h-36 w-36 object-contain block transition-transform hover:scale-105 duration-500">
                     <p class="text-white/40 text-sm leading-relaxed font-light" data-i18n="footer_desc">Especialistas en visualización técnica de alta fidelidad. Resolvemos la complejidad para promotoras y arquitectos globales.</p>
@@ -228,9 +232,9 @@
                 <div class="space-y-8">
                     <h5 class="font-mono text-[10px] tracking-[0.4em] uppercase text-bronze" data-i18n="footer_col_3">Conectar</h5>
                     <div class="flex gap-6">
-                        <a href="#" class="text-white/40 hover:text-bronze transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" class="text-white/40 hover:text-bronze transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                        <a href="#" class="text-white/40 hover:text-bronze transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mognorender/" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-bronze transition-all" title="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="https://www.linkedin.com/company/mogno-render/" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-bronze transition-all" title="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61585579040115&locale=pt_BR" target="_blank" rel="noopener noreferrer" class="text-white/40 hover:text-bronze transition-all" title="Facebook"><i data-lucide="facebook" class="w-5 h-5"></i></a>
                     </div>
                 </div>
             </div>
@@ -244,12 +248,49 @@
         </div>
     </footer>
 
-    <!-- WHATSAPP FAB -->
-    <a href="https://wa.me/34682453682" id="whatsapp-fab" target="_blank" class="fixed bottom-8 right-8 z-50 bg-bronze text-white p-5 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-500 translate-y-20 opacity-0 group">
-        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-[250px] transition-all duration-500 font-mono text-[10px] tracking-[0.2em] uppercase" data-i18n="whatsapp_label">Hablemos de su proyecto</span>
-        <i data-lucide="message-circle" class="w-6 h-6"></i>
-    </a>
-
-    <script type="module" src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="data.js"></script>
 </body>
 </html>
+
+---
+
+## ✅ Principais Mudanças:
+
+### **Redes Sociais (Footer - Seção "Conectar"):**
+
+<!-- ✅ INSTAGRAM -->
+<a href="https://www.instagram.com/mognorender/" target="_blank" rel="noopener noreferrer" 
+   class="text-white/40 hover:text-bronze transition-all" title="Instagram">
+    <i data-lucide="instagram" class="w-5 h-5"></i>
+</a>
+
+<!-- ✅ LINKEDIN -->
+<a href="https://www.linkedin.com/company/mogno-render/" target="_blank" rel="noopener noreferrer" 
+   class="text-white/40 hover:text-bronze transition-all" title="LinkedIn">
+    <i data-lucide="linkedin" class="w-5 h-5"></i>
+</a>
+
+<!-- ✅ FACEBOOK -->
+<a href="https://www.facebook.com/profile.php?id=61585579040115&locale=pt_BR" target="_blank" rel="noopener noreferrer" 
+   class="text-white/40 hover:text-bronze transition-all" title="Facebook">
+    <i data-lucide="facebook" class="w-5 h-5"></i>
+</a>
+
+---
+
+## 🚀 Como Usar:
+
+1. **Copie todo o código** (de `<!DOCTYPE html>` até `</html>`)
+2. **Substitua seu `index.html`** no repositório
+3. **Faça git push:**
+   git add index.html
+   git commit -m "Update social media links - Instagram, LinkedIn, Facebook"
+   git push origin main
+4. **Vercel fará deploy automático** em < 1 minuto ✅
+
+---
+
+## 📌 Verificação:
+
+Acesse seu site e clique nos ícones de redes sociais no rodapé. Todos devem abrir em nova aba! 🎯
