@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOGNO RENDER | High-Performance Architectural Visualization</title>
+    
+    <!-- SEO & Meta -->
+    <meta name="description" content="Mogno Render: Specialized B2B architectural visualization. Premium 3D renders, 360° tours, and cinematic videos for the global real estate market.">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/drlsevtfr/image/upload/v1766093382/logo2_lrulvz.png">
+
+    <!-- CDNs -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-off-white text-mogno-earth overflow-x-hidden antialiased">
+
+    <!-- AUDIO ELEMENT -->
+    <audio id="manifesto-audio"></audio>
+
+    <!-- HEADER -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out py-6">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="logo-container h-6 md:h-8">
+                <img id="logo-img" src="https://res.cloudinary.com/drlsevtfr/image/upload/v1766096526/Logo_nombre_blanco_khubvp.png" alt="MOGNO RENDER" class="h-full object-contain">
+            </a>
+            
+            <nav class="hidden lg:flex items-center gap-10">
+                <a href="#about" class="nav-link text-[10px] uppercase tracking-[0.25em] font-medium text-white" data-i18n="nav_about">SOBRE</a>
+                <a href="#portfolio" class="nav-link text-[10px] uppercase tracking-[0.25em] font-medium text-white" data-i18n="nav_work">PORTFOLIO</a>
+                <a href="#method" class="nav-link text-[10px] uppercase tracking-[0.25em] font-medium text-white" data-i18n="nav_method">MÉTODO</a>
+                <a href="#faq" class="nav-link text-[10px] uppercase tracking-[0.25em] font-medium text-white" data-i18n="nav_faq">FAQ</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <!-- FLAG LANGUAGE PICKER -->
+                <div class="flex items-center gap-4">
+                    <button onclick="window.setLanguage('es')" class="lang-flag-btn active" id="btn-es" title="Español">
+                        <img src="https://flagcdn.com/w40/es.png" alt="ES" class="w-6 h-4 object-cover rounded-sm border border-white/20">
+                    </button>
+                    <button onclick="window.setLanguage('en')" class="lang-flag-btn" id="btn-en" title="English">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="w-6 h-4 object-cover rounded-sm border border-white/20">
+                    </button>
+                </div>
+                <a href="https://wa.me/34682453682" target="_blank" class="contact-trigger border border-white/30 text-white px-6 py-2 text-[10px] uppercase tracking-widest font-bold hover:bg-bronze hover:border-bronze transition-all duration-300" data-i18n="nav_contact">CONTACTO</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative h-screen w-full overflow-hidden flex items-center justify-center bg-black-mogno">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-50">
+            <source src="https://res.cloudinary.com/drlsevtfr/video/upload/f_auto,q_auto/v1766097228/3_vpxnxd.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10 text-center px-6 reveal">
+            <div class="inline-flex items-center gap-3 mb-6 bg-bronze px-4 py-1.5">
+                <span class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                <span class="text-white font-mono text-[10px] tracking-[0.3em] uppercase" data-i18n="hero_badge">Status: Alto Rendimiento</span>
+            </div>
+            <h1 class="text-white text-4xl md:text-8xl font-bold tracking-tight leading-[1] max-w-5xl mx-auto mb-8 uppercase">
+                <span class="block" data-i18n="hero_title">Visualización sin ruido.</span>
+            </h1>
+            <p class="text-white/70 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed mb-10" data-i18n="hero_sub">
+                Transformamos proyectos arquitectónicos complejos en herramientas de venta de alta fidelidad. 60% más rápido. 100% previsible.\
+            </p>
+            <div class="flex flex-col md:flex-row gap-5 justify-center">
+                <a href="#method" class="bg-bronze text-white px-12 py-4 text-[11px] font-bold uppercase tracking-widest hover:bg-white hover:text-black-mogno transition-all duration-300" data-i18n="hero_cta_2">NUESTRO MÉTODO</a>
+                <a href="#portfolio" class="border border-white/20 text-white px-12 py-4 text-[11px] font-bold uppercase tracking-widest hover:border-white hover:bg-white/5 transition-all duration-300" data-i18n="hero_cta_1">VER PORTFOLIO</a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 text-white/30">
+            <span class="font-mono text-[9px] tracking-[0.5em] uppercase" data-i18n="hero_scroll">Scroll para explorar</span>
+            <div class="w-px h-12 bg-gradient-to-b from-white/30 to-transparent"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT / MANIFESTO -->
+    <section id="about" class="py-24 md:py-48 px-6 md:px-12 bg-off-white">
+        <div class="max-w-[1440px] mx-auto grid lg:grid-cols-12 gap-16 items-start">
+            <div class="lg:col-span-5 reveal">
+                <span class="font-mono text-bronze text-[11px] tracking-[0.3em] uppercase mb-6 block" data-i18n="about_label">01 // OPERADORES TÁCTICOS</span>
+                <h2 class="text-3xl md:text-6xl font-bold leading-[1.1] mb-12" data-i18n="about_title">Eliminamos el caos de su cronograma.</h2>
+                
+                <div class="manifesto-box bg-dark-mogno p-8 rounded-sm relative overflow-hidden group">
+                    <div class="relative z-10 flex items-center gap-6">
+                        <button id="manifesto-btn" class="w-14 h-14 bg-bronze flex items-center justify-center rounded-full hover:scale-105 transition-all">
+                            <i data-lucide="play" class="text-white w-5 h-5 ml-1" id="play-icon"></i>
+                            <i data-lucide="pause" class="text-white w-5 h-5 hidden" id="pause-icon"></i>
+                        </button>
+                        <div>
+                            <p class="font-mono text-[10px] text-bronze tracking-widest uppercase mb-1" data-i18n="manifesto_label">Manifesto Liam</p>
+                            <p class="text-white text-xs tracking-widest uppercase font-bold" id="manifesto-status" data-i18n="manifesto_cta">Escuchar Audio Guía</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex items-end gap-[3px] h-10" id="soundwave"></div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 flex flex-col gap-12 reveal delay-200">
+                <p class="text-xl md:text-3xl text-mogno-earth/80 leading-snug font-light italic" data-i18n="about_p1">
+                    "En Mogno Render, no solo creamos imágenes; optimizamos su flujo de aprobación. Somos el equipo que entiende que la eficiencia es la forma más elevada de arte."
+                </p>
+                <div class="grid md:grid-cols-2 gap-12 border-t border-mogno-earth/10 pt-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3 text-crimson">
+                            <i data-lucide="zap" class="w-4 h-4"></i>
+                            <span class="font-mono text-[10px] tracking-widest uppercase font-bold" data-i18n="stat_1_label">Velocidad</span>
+                        </div>
+                        <p class="text-2xl font-bold uppercase tracking-tight" data-i18n="stat_1_val">60% más rápido</p>
+                        <p class="text-sm text-mogno-earth/60 font-light" data-i18n="stat_1_desc">Optimización total de flujo técnico para entregas B2B sin fricción.</p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3 text-bronze">
+                            <i data-lucide="shield-check" class="w-4 h-4"></i>
+                            <span class="font-mono text-[10px] tracking-widest uppercase font-bold" data-i18n="stat_2_label">Predictibilidad</span>
+                        </div>
+                        <p class="text-2xl font-bold uppercase tracking-tight" data-i18n="stat_2_val">Cero Drama</p>
+                        <p class="text-sm text-mogno-earth/60 font-light" data-i18n="stat_2_desc">Checklists rigurosos y gestión técnica directa. Sin sorpresas de última hora.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="bg-dark-mogno text-white py-24 md:py-32 px-6 md:px-12">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-10 reveal">
+                <div>
+                    <span class="font-mono text-bronze text-[11px] tracking-[0.3em] uppercase mb-6 block" data-i18n="portfolio_label">02 // INGENIERÍA VISUAL</span>
+                    <h2 class="text-4xl md:text-7xl font-bold uppercase tracking-tighter" data-i18n="portfolio_title">PROYECTOS</h2>
+                </div>
+                <div class="flex gap-8 font-mono text-[10px] tracking-widest uppercase overflow-x-auto pb-4 md:pb-0 scrollbar-hide">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">TODOS</button>
+                    <button class="filter-btn" data-filter="torre" data-i18n="filter_urban">URBANO</button>
+                    <button class="filter-btn" data-filter="residencial" data-i18n="filter_res">RESIDENCIAL</button>
+                    <button class="filter-btn" data-filter="interior" data-i18n="filter_int">INTERIOR</button>
+                </div>
+            </div>
+
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+                <!-- Items injected by script.js -->
+            </div>
+
+            <!-- SHOW MORE BUTTON -->
+            <div class="mt-16 text-center reveal">
+                <button id="show-more-portfolio" class="group flex items-center gap-4 mx-auto font-mono text-[11px] tracking-[0.4em] uppercase text-white/50 hover:text-bronze transition-all">
+                    <span data-i18n="portfolio_show_more">Mostrar +</span>
+                    <i data-lucide="plus" class="w-4 h-4 transition-transform group-hover:rotate-90"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHOD -->
+    <section id="method" class="py-24 md:py-48 px-6 md:px-12 bg-white">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="text-center mb-24 reveal">
+                <span class="font-mono text-bronze text-[11px] tracking-[0.3em] uppercase mb-6 block" data-i18n="method_label">03 // PROCESO Y PRECISIÓN</span>
+                <h2 class="text-4xl md:text-6xl font-bold" data-i18n="method_title">El Método Mogno</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-px bg-mogno-earth/10 border border-mogno-earth/10 reveal">
+                <div class="bg-white p-12 group hover:bg-off-white transition-all duration-500">
+                    <div class="w-10 h-10 flex items-center justify-center bg-dark-mogno text-bronze font-mono text-xs mb-10 group-hover:bg-bronze group-hover:text-white transition-all">01</div>
+                    <h3 class="font-bold text-lg mb-6 uppercase tracking-wider" data-i18n="step_1_t">Briefing</h3>
+                    <p class="text-sm text-mogno-earth/60 leading-relaxed font-light" data-i18n="step_1_d">Recepción estructurada de archivos. Eliminamos la ambigüedad técnica desde el primer minuto.</p>
+                </div>
+                <div class="bg-white p-12 group hover:bg-off-white transition-all duration-500">
+                    <div class="w-10 h-10 flex items-center justify-center bg-dark-mogno text-bronze font-mono text-xs mb-10 group-hover:bg-bronze group-hover:text-white transition-all">02</div>
+                    <h3 class="font-bold text-lg mb-6 uppercase tracking-wider" data-i18n="step_2_t">Modelado</h3>
+                    <p class="text-sm text-mogno-earth/60 leading-relaxed font-light" data-i18n="step_2_d">Construcción geométrica optimizada para máxima performance y fidelidad arquitectónica.</p>
+                </div>
+                <div class="bg-white p-12 group hover:bg-off-white transition-all duration-500">
+                    <div class="w-10 h-10 flex items-center justify-center bg-dark-mogno text-bronze font-mono text-xs mb-10 group-hover:bg-bronze group-hover:text-white transition-all">03</div>
+                    <h3 class="font-bold text-lg mb-6 uppercase tracking-wider" data-i18n="step_3_t">Luz & Textura</h3>
+                    <p class="text-sm text-mogno-earth/60 leading-relaxed font-light" data-i18n="step_3_d">Control de calidad "Crimson Precision". Materiales y luz que simulan la reality física.</p>
+                </div>
+                <div class="bg-white p-12 group hover:bg-off-white transition-all duration-500">
+                    <div class="w-10 h-10 flex items-center justify-center bg-dark-mogno text-bronze font-mono text-xs mb-10 group-hover:bg-bronze group-hover:text-white transition-all">04</div>
+                    <h3 class="font-bold text-lg mb-6 uppercase tracking-wider" data-i18n="step_4_t">Entrega</h3>
+                    <p class="text-sm text-mogno-earth/60 leading-relaxed font-light" data-i18n="step_4_d">Activos de alta resolución listos para su campaña. Proyecto resuelto, sin drama.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 md:py-48 px-6 md:px-12 bg-off-white">
+        <div class="max-w-[800px] mx-auto reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight uppercase" data-i18n="faq_title">Dudas Frecuentes</h2>
+            <div id="faq-container" class="space-y-4"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark-mogno text-white py-24 md:py-32 px-6 md:px-12 border-t border-white/5">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-24">
+                <!-- LOGO COLUMN - UPDATED WITH SIZE 3X AND CENTERED ALIGNMENT -->
+                <div class="flex flex-col items-center text-center md:items-start md:text-left space-y-8">
+                    <img src="https://res.cloudinary.com/drlsevtfr/image/upload/v1766093382/logo2_lrulvz.png" alt="MOGNO Logo" class="h-36 w-36 object-contain block transition-transform hover:scale-105 duration-500">
+                    <p class="text-white/40 text-sm leading-relaxed font-light" data-i18n="footer_desc">Especialistas en visualización técnica de alta fidelidad. Resolvemos la complejidad para promotoras y arquitectos globales.</p>
+                </div>
+                <div class="space-y-8">
+                    <h5 class="font-mono text-[10px] tracking-[0.4em] uppercase text-bronze" data-i18n="footer_col_1">Navegación</h5>
+                    <ul class="space-y-4 text-[11px] font-medium uppercase tracking-[0.2em]">
+                        <li><a href="#about" class="text-white/60 hover:text-bronze transition-colors" data-i18n="nav_about">Sobre</a></li>
+                        <li><a href="#portfolio" class="text-white/60 hover:text-bronze transition-colors" data-i18n="nav_work">Portfolio</a></li>
+                        <li><a href="#method" class="text-white/60 hover:text-bronze transition-colors" data-i18n="nav_method">Método</a></li>
+                        <li><a href="#faq" class="text-white/60 hover:text-bronze transition-colors" data-i18n="nav_faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <h5 class="font-mono text-[10px] tracking-[0.4em] uppercase text-bronze" data-i18n="footer_col_2">Contacto Directo</h5>
+                    <ul class="space-y-4 text-sm font-light">
+                        <li><a href="mailto:commercial@embalalab.com" class="hover:text-bronze transition-colors block text-lg font-medium">commercial@embalalab.com</a></li>
+                        <li><a href="https://wa.me/34682453682" class="hover:text-bronze transition-colors block">+34 682 453 682</a></li>
+                        <li class="text-white/30 italic">Costa del Sol, Spain</li>
+                    </ul>
+                </div>
+                <div class="space-y-8">
+                    <h5 class="font-mono text-[10px] tracking-[0.4em] uppercase text-bronze" data-i18n="footer_col_3">Conectar</h5>
+                    <div class="flex gap-6">
+                        <a href="#" class="text-white/40 hover:text-bronze transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-white/40 hover:text-bronze transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="text-white/40 hover:text-bronze transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                <span class="text-[9px] font-mono tracking-[0.3em] text-white/20 uppercase">© 2025 MOGNO RENDER // ALL RIGHTS RESERVED</span>
+                <div class="flex items-center gap-3 text-[9px] font-mono tracking-[0.3em] text-white/20 uppercase">
+                    <span class="w-1 h-1 bg-crimson rounded-full animate-pulse"></span>
+                    <span>High Fidelity Operational Excellence</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FAB -->
+    <a href="https://wa.me/34682453682" id="whatsapp-fab" target="_blank" class="fixed bottom-8 right-8 z-50 bg-bronze text-white p-5 rounded-full shadow-2xl flex items-center gap-3 transition-all duration-500 translate-y-20 opacity-0 group">
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-[250px] transition-all duration-500 font-mono text-[10px] tracking-[0.2em] uppercase" data-i18n="whatsapp_label">Hablemos de su proyecto</span>
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
